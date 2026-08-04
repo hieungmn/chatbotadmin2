@@ -1,0 +1,122 @@
+{
+  "language": "vi",
+  "type": "user-manual",
+  "entry": "index.html",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "Hướng dẫn sử dụng FAQ Hub Chatbot",
+      "group": "Mục lục",
+      "audience": "Người sử dụng, quản trị viên và người vận hành"
+    },
+    {
+      "file": "12-cai-dat.html",
+      "title": "Chuẩn bị môi trường và cài đặt",
+      "group": "Chuẩn bị và cài đặt",
+      "audience": "Người phụ trách kỹ thuật"
+    },
+    {
+      "file": "13-khoi-dong-sao-luu.html",
+      "title": "Khởi động, dừng và sao lưu",
+      "group": "Chuẩn bị và cài đặt",
+      "audience": "Người phụ trách kỹ thuật"
+    },
+    {
+      "file": "01-dang-nhap.html",
+      "title": "Đăng nhập và đăng xuất",
+      "group": "Bắt đầu sử dụng",
+      "audience": "Người quản lý nội dung và quản trị viên"
+    },
+    {
+      "file": "02-chon-website.html",
+      "title": "Chọn website và chuyển chức năng",
+      "group": "Bắt đầu sử dụng",
+      "audience": "Người quản lý nội dung và quản trị viên"
+    },
+    {
+      "file": "10-cau-hinh-website.html",
+      "title": "Cấu hình website và chatbot",
+      "group": "Thiết lập hệ thống",
+      "audience": "Quản trị viên"
+    },
+    {
+      "file": "11-quan-ly-tai-khoan.html",
+      "title": "Tạo tài khoản và cấp quyền",
+      "group": "Thiết lập hệ thống",
+      "audience": "Quản trị viên"
+    },
+    {
+      "file": "03-quan-ly-faq.html",
+      "title": "Tạo, sửa và duyệt FAQ",
+      "group": "Quản lý nội dung",
+      "audience": "Nhân viên của website và quản trị viên"
+    },
+    {
+      "file": "04-nhap-faq-excel.html",
+      "title": "Nhập nhiều FAQ từ Excel",
+      "group": "Quản lý nội dung",
+      "audience": "Nhân viên của website và quản trị viên"
+    },
+    {
+      "file": "05-anh-faq.html",
+      "title": "Thêm và xóa ảnh FAQ",
+      "group": "Quản lý nội dung",
+      "audience": "Nhân viên của website và quản trị viên"
+    },
+    {
+      "file": "06-tai-lieu-ai.html",
+      "title": "Tải tài liệu cho AI sử dụng",
+      "group": "Quản lý nội dung",
+      "audience": "Nhân viên của website và quản trị viên"
+    },
+    {
+      "file": "07-quan-ly-tai-lieu.html",
+      "title": "Xem, duyệt và xóa tài liệu",
+      "group": "Quản lý nội dung",
+      "audience": "Nhân viên của website và quản trị viên"
+    },
+    {
+      "file": "08-su-dung-chat.html",
+      "title": "Hỏi và đọc câu trả lời",
+      "group": "Sử dụng chatbot",
+      "audience": "Khách truy cập và người kiểm tra nội dung"
+    },
+    {
+      "file": "09-nhung-chat.html",
+      "title": "Đặt cửa sổ chat vào website",
+      "group": "Sử dụng chatbot",
+      "audience": "Người phụ trách website"
+    },
+    {
+      "file": "14-xu-ly-su-co.html",
+      "title": "Khi gặp sự cố",
+      "group": "Tra cứu",
+      "audience": "Tất cả người dùng; phần khởi động dành cho người vận hành"
+    },
+    {
+      "file": "15-tu-vung-giao-dien.html",
+      "title": "Tên nút và trạng thái trên màn hình",
+      "group": "Tra cứu",
+      "audience": "Tất cả người dùng"
+    }
+  ],
+  "screenshots": {
+    "source": "Current frontend screenshots with invented sample data and simulated API results",
+    "files": [
+      "faq-editor.png",
+      "faq-images.png",
+      "faq-preview.png",
+      "faq.png",
+      "knowledge-detail.png",
+      "knowledge-error.png",
+      "knowledge-result.png",
+      "knowledge-wait.png",
+      "knowledge.png",
+      "login.png",
+      "sites.png",
+      "users.png",
+      "widget-faq.png",
+      "widget.png"
+    ]
+  }
+}

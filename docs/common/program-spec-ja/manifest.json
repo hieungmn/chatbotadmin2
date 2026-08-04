@@ -1,0 +1,154 @@
+{
+  "language": "ja",
+  "source": "../FAQ_Hub_Chatbot_Dac_ta_Chuong_trinh_VI_Moi.xlsx",
+  "pages": [
+    {
+      "file": "01-purpose.html",
+      "title": "01 文書の目的"
+    },
+    {
+      "file": "02-overview.html",
+      "title": "02 システムの概要"
+    },
+    {
+      "file": "03-permissions.html",
+      "title": "03 利用者とアクセス権限"
+    },
+    {
+      "file": "04-screens.html",
+      "title": "04 画面と操作"
+    },
+    {
+      "file": "04-login.html",
+      "title": "ログイン"
+    },
+    {
+      "file": "04-faq.html",
+      "title": "FAQ管理"
+    },
+    {
+      "file": "04-import.html",
+      "title": "FAQ一括取込"
+    },
+    {
+      "file": "04-images.html",
+      "title": "FAQ画像"
+    },
+    {
+      "file": "04-knowledge.html",
+      "title": "AIナレッジ"
+    },
+    {
+      "file": "04-chat.html",
+      "title": "チャット"
+    },
+    {
+      "file": "04-feedback.html",
+      "title": "回答の評価ボタン"
+    },
+    {
+      "file": "04-admin.html",
+      "title": "サイト・ユーザー管理"
+    },
+    {
+      "file": "05-information.html",
+      "title": "05 資料の読込と情報検索"
+    },
+    {
+      "file": "06-data.html",
+      "title": "06 データベースとER図"
+    },
+    {
+      "file": "06-erd-overview.html",
+      "title": "全体のER図"
+    },
+    {
+      "file": "06-erd-accounts.html",
+      "title": "アカウントと権限"
+    },
+    {
+      "file": "06-erd-faq.html",
+      "title": "FAQ・取込ファイル・画像"
+    },
+    {
+      "file": "06-erd-knowledge.html",
+      "title": "AI用資料と本文"
+    },
+    {
+      "file": "06-erd-conversation.html",
+      "title": "会話と検索履歴"
+    },
+    {
+      "file": "06-dictionary.html",
+      "title": "データ辞書"
+    },
+    {
+      "file": "07-structure.html",
+      "title": "07 プログラム構成と処理"
+    },
+    {
+      "file": "08-api.html",
+      "title": "08 API仕様"
+    },
+    {
+      "file": "09-limits.html",
+      "title": "09 処理の上限と待ち時間"
+    },
+    {
+      "file": "10-operations.html",
+      "title": "10 運用とエラー対応"
+    },
+    {
+      "file": "11-glossary.html",
+      "title": "11 用語と参照先"
+    },
+    {
+      "file": "appendix-checks.html",
+      "title": "12 テストと動作確認"
+    }
+  ],
+  "table_count": 12,
+  "field_count": 107,
+  "api_count": 33,
+  "offline": true,
+  "chapter_07_flows": {
+    "format": "SVG",
+    "source": "Excel chapter 07",
+    "diagrams": [
+      "faq",
+      "import",
+      "chat"
+    ],
+    "translation": "Japanese node and branch labels; original nodes and directed connections preserved",
+    "layout": "Vertical; 14px labels; tightened decision shapes and vertical gaps",
+    "compact_shapes": [
+      {
+        "diagram": "faq",
+        "decisions": 3,
+        "originalHeight": 978.296875,
+        "compactHeight": 890,
+        "edges": 15,
+        "nativeWidth": 745.6171875
+      },
+      {
+        "diagram": "import",
+        "decisions": 2,
+        "originalHeight": 925.0,
+        "compactHeight": 861,
+        "edges": 10,
+        "nativeWidth": 418.0
+      },
+      {
+        "diagram": "chat",
+        "decisions": 4,
+        "originalHeight": 1044.25,
+        "compactHeight": 862,
+        "edges": 17,
+        "nativeWidth": 389.96875
+      }
+    ],
+    "chat_label_font_px": 10,
+    "faq_label_font_px": 12,
+    "import_label_font_px": 12
+  }
+}

@@ -1,0 +1,80 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>環境の準備とセットアップ | FAQ Hub 取扱説明書</title><link rel="stylesheet" href="assets/manual.css"></head><body id="top"><a class="skip" href="#main">本文へ移動</a><aside class="sidebar" id="manual-menu" aria-label="取扱説明書の目次"><a class="home" href="index.html">FAQ HUB<span>取扱説明書</span></a><div class="sidebar-title">目次</div><div class="nav-groups"><div class="nav-group overview-group"><a href="index.html">1. プロジェクト概要</a></div><div class="nav-group"><strong>2. 準備とセットアップ</strong><a href="12-setup.html" aria-current="page">環境の準備とセットアップ</a><a href="13-operations.html">起動・停止・バックアップ</a></div><div class="nav-group"><strong>3. 使い始める</strong><a href="01-login.html">ログインとログアウト</a><a href="02-select-site.html">サイトと機能の選択</a></div><div class="nav-group"><strong>4. システム設定</strong><a href="10-site-settings.html">サイトとチャットボットの設定</a><a href="11-user-management.html">アカウント作成と権限設定</a></div><div class="nav-group"><strong>5. コンテンツ管理</strong><a href="03-faq-management.html">FAQの作成・編集・承認</a><a href="04-faq-import.html">ExcelからFAQを一括取込</a><a href="05-faq-images.html">FAQ画像の追加・削除</a><a href="06-knowledge-upload.html">AI用資料のアップロード</a><a href="07-knowledge-management.html">資料の確認・承認・削除</a></div><div class="nav-group"><strong>6. チャットボットの利用</strong><a href="08-chat-usage.html">質問と回答の確認</a><a href="09-widget-embedding.html">Webサイトへのチャット設置</a></div><div class="nav-group"><strong>7. 困ったとき・用語</strong><a href="14-troubleshooting.html">トラブル対応</a><a href="15-glossary.html">画面のボタンと状態の意味</a></div></div></aside><main id="main"><button class="menu-toggle" aria-controls="manual-menu" aria-expanded="false">☰ 目次を開く／閉じる</button><header><div class="eyebrow">セットアップと運用</div><h1>環境の準備とセットアップ</h1><p class="lead">Windowsの1台のPCに、次の7つの手順でセットアップします。</p><div class="header-meta"><span>初回セットアップ</span><button class="print">印刷 / PDF保存</button></div></header><article>
+<h2 id="chuan-bi">1. ソフトウェアの準備</h2>
+<p>システムを動かすWindows PCに、次のソフトウェアを用意します。</p>
+<div class="table-scroll"><table><thead><tr><th>ソフトウェア</th><th>バージョン・用途</th></tr></thead><tbody>
+<tr><td><a href="https://code.visualstudio.com/">VS Code</a></td><td>プロジェクトを開き、Terminalでコマンドを実行します。</td></tr>
+<tr><td><a href="https://nodejs.org/en/download">Node.js</a></td><td>24.x。npmを含みます。</td></tr>
+<tr><td><a href="https://www.postgresql.org/download/windows/">PostgreSQL</a></td><td>17.x・64-bit（17.3以降）。インストール時のポート、ユーザー名、パスワードを控えてください。</td></tr>
+<tr><td>pgAdmin 4</td><td>PostgreSQLを管理し、schema.sqlを実行します。</td></tr>
+<tr><td>pgvector</td><td>0.8.7。手順3で追加します。</td></tr>
+<tr><td><a href="https://ollama.com/download/windows">Ollama</a></td><td>AIを実行します。モデルは手順5で取得します。</td></tr>
+<tr><td>EdgeまたはChrome</td><td>管理画面とチャットを開きます。</td></tr>
+</tbody></table></div>
+<p>TypeScriptは手順2でプロジェクトのパッケージと一緒に入るため、個別のインストールは不要です。</p>
+
+<h2 id="goi-chuong-trinh">2. プロジェクトのパッケージをインストール</h2>
+<p>VS Codeでプロジェクトのフォルダーを開く → <strong>Terminal → New Terminal</strong>を選択し、次のコマンドを実行します：</p>
+<pre><code>cd chatbot-backend
+npm ci
+cd ..\chatbot-frontend
+npm ci</code></pre>
+<p><strong>確認：</strong> BackendとFrontendの両方でnpm ciがエラーなく完了すること。</p>
+
+<h2 id="database">3. pgvectorの追加とDBの作成</h2>
+<h3>必要なもの</h3>
+<ul><li>PostgreSQLとpgAdmin 4。インストール済みの場合は、現在の環境を使用します。</li><li>使用中のPostgreSQLとWindowsに対応した、ビルド済みのpgvectorファイル一式。</li></ul>
+<h3>インストール手順</h3>
+<ol><li>pgAdminで <strong>Query Tool</strong> を開く → <code>SHOW server_version;</code> を実行し、PostgreSQLのバージョンを確認します。</li>
+<li>対応するpgvectorを展開します。展開先で左欄のファイルを探し、右欄のフォルダーにコピーしてください。すでにpgvectorを追加済みなら、この手順は不要です。</li></ol>
+<p>PostgreSQL 17を<code>C:\Program Files\PostgreSQL\17</code>にインストールした場合のコピー先：</p>
+<div class="table-scroll"><table><thead><tr><th>展開したpgvectorからコピーするファイル</th><th>コピー先フォルダー</th></tr></thead><tbody>
+<tr><td><code>vector.dll</code></td><td><code>C:\Program Files\PostgreSQL\17\lib</code></td></tr>
+<tr><td><code>vector.control</code></td><td><code>C:\Program Files\PostgreSQL\17\share\extension</code></td></tr>
+<tr><td>名前が <code>vector--</code> で始まり、拡張子が <code>.sql</code> のファイルすべて</td><td><code>C:\Program Files\PostgreSQL\17\share\extension</code></td></tr>
+</tbody></table></div>
+<p>別の場所・バージョンにインストールしている場合は、実際のPostgreSQLのフォルダーに読み替えてください。pgAdminのフォルダーにはコピーしません。</p>
+<ol start="3"><li>pgAdminで<strong>Databases → Create → Database</strong>を選択し、DB名を<code>faq_hub</code>にします。</li>
+<li><code>faq_hub</code>を選択 → <strong>Query Tool</strong> → <code>chatbot-backend/database/schema.sql</code>を開く → ファイル全体を実行。</li>
+<li><strong>Schemas → public → Tables</strong>を更新し、<strong>12個のテーブル</strong>があることを確認します。</li></ol>
+<p><code>schema.sql</code>は、新規のデータがないDBでのみ実行してください。pgvectorの有効化と初期アカウントの作成も行います。</p>
+
+<h2 id="cau-hinh">4. 接続設定</h2>
+<p><code>.env.example</code>をコピーして<code>chatbot-backend/.env</code>を作成します。すでにある場合は、次の設定値を変更してください。</p>
+<pre><code>DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=&quot;your_postgresql_password&quot;
+DB_NAME=faq_hub
+PORT=3000
+OLLAMA_URL=http://localhost:11434
+JWT_SECRET=&quot;replace_with_random_secret&quot;</code></pre>
+<p>DB_PASSWORDにPostgreSQLのパスワードを入力します。JWT_SECRETは、次のコマンドで生成した文字列をコピーしてください。</p>
+<pre><code>node -e &quot;console.log(require('crypto').randomBytes(48).toString('hex'))&quot;</code></pre>
+<p><code>chatbot-frontend/.env</code>を作成または編集します。</p>
+<pre><code>VITE_API_URL=http://localhost:3000</code></pre>
+<p><a href="index.html#bien-moi-truong">設定値の説明</a>。</p>
+
+<h2 id="ollama">5. AIモデルの取得</h2>
+<p>Ollamaを起動し、インターネットに接続したTerminalで実行します：</p>
+<pre><code>ollama pull nomic-embed-text
+ollama pull gemma3:4b
+ollama list</code></pre>
+<p><strong>確認：</strong> 一覧に両方のモデルがあること。取得は初回だけです。</p>
+
+<h2 id="chay">6. システムの起動</h2>
+<p>PostgreSQLとOllamaを起動し、プロジェクトのルートフォルダーでTerminalを2つ開きます。</p>
+<p><strong>Terminal 1 — Backend：</strong></p>
+<pre><code>cd chatbot-backend
+npm run dev</code></pre>
+<p><strong>Terminal 2 — Frontend：</strong></p>
+<pre><code>cd chatbot-frontend
+npm run dev -- --host 127.0.0.1 --port 5173 --strictPort</code></pre>
+<p>両方のTerminalを開いたまま、次のURLへアクセスします： <a href="http://localhost:5173/admin/login">http://localhost:5173/admin/login</a>。</p>
+
+<h2 id="kiem-tra">7. ログインと確認</h2>
+<ol><li>初期アカウントでログインします： <code>admin / 123456</code>。</li>
+<li>サンプルサイトを選択し、チャットでFAQの内容を質問します。</li>
+<li>本文が入ったWord資料をアップロードし、承認済みになっていることを確認して、その内容を質問します。</li></ol>
+<p>確認後は、 <a href="11-user-management.html">自分用の管理者アカウントを作成</a>し、新しいアカウントでログインしてから初期アカウントを削除してください。</p>
+<p>次回からの起動： <a href="13-operations.html">起動・停止・バックアップ</a>。</p>
+</article><div class="page-nav bottom"><a href="index.html">⌂ 目次</a><a href="13-operations.html">起動・停止・バックアップ →</a></div><footer>FAQ Hub Chatbot · 取扱説明書</footer></main><a class="to-top" href="#top">↑ ページ上部へ</a><script src="assets/manual.js"></script></body></html>

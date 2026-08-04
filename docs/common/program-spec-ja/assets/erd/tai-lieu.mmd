@@ -1,0 +1,60 @@
+erDiagram
+    direction LR
+    sites {
+        string site_id PK
+        string site_name
+        text contact_url
+        text home_url
+        string theme_color
+        string ai_model
+        text custom_prompt_rules
+        text avatar_url
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    admin_users {
+        int id PK
+        string username UK
+        string password_hash
+        int password_version
+        string full_name
+        string role
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    site_knowledge_files {
+        int id PK
+        string site_id FK
+        string file_name
+        string file_type
+        text file_path
+        string status
+        string approval_status
+        int reviewed_by FK
+        timestamp reviewed_at
+        int uploaded_by FK
+        text error_message
+        timestamp created_at
+        timestamp updated_at
+    }
+    site_knowledge_chunks {
+        bigint id PK
+        int file_id FK
+        string site_id FK
+        text content_text
+        vector768 embedding
+        int chunk_index
+        text section_id
+        text section_title
+        int page_number
+        text sheet_name
+        int row_number
+        timestamp created_at
+    }
+    sites ||--o{ site_knowledge_chunks : "site_id → site_id"
+    sites ||--o{ site_knowledge_files : "site_id → site_id"
+    admin_users |o--o{ site_knowledge_files : "id → reviewed_by"
+    admin_users |o--o{ site_knowledge_files : "id → uploaded_by"
+    site_knowledge_files ||--o{ site_knowledge_chunks : "id → file_id"

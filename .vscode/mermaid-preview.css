@@ -1,0 +1,57 @@
+/* Let VS Code own diagram transforms so zoom, pan and reset keep working. */
+body:has(.mermaid-canvas) {
+    max-width: none;
+}
+
+.mermaid-canvas {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mermaid-canvas .mermaid-wrapper {
+    box-sizing: border-box;
+    /* Compact charts should not inherit the large-chart minimum height. */
+    min-height: 120px;
+    max-height: 85vh !important;
+}
+
+.mermaid-canvas .mermaid {
+    display: block !important;
+}
+
+.mermaid-canvas svg {
+    display: block;
+}
+
+/* Keep the toolbar visible above labels and the panning content. */
+.mermaid-canvas .mermaid-zoom-controls {
+    z-index: 100;
+    opacity: 1;
+    background-color: #252525;
+    border: 1px solid #606060;
+}
+
+.mermaid-canvas .mermaid-zoom-controls button {
+    color: #f2f2f2;
+}
+
+.mermaid-canvas .mermaid-resize-handle {
+    z-index: 90;
+}
+
+/* Link colors apply only to docs/report/目次.md in Markdown Preview. */
+body:has(#report-toc) a[href] {
+    color: #80501f;
+    text-decoration-color: currentColor;
+}
+
+body.vscode-dark:has(#report-toc) a[href],
+body.vscode-high-contrast:has(#report-toc) a[href] {
+    color: #e4c38c;
+}
+
+body:has(#report-toc) a[href]:hover {
+    text-decoration: underline;
+}

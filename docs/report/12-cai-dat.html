@@ -1,0 +1,80 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chuẩn bị môi trường và cài đặt | Hướng dẫn FAQ Hub</title><link rel="stylesheet" href="assets/manual.css"></head><body id="top"><a class="skip" href="#main">Đến nội dung</a><aside class="sidebar" id="manual-menu" aria-label="Mục lục hướng dẫn"><a class="home" href="index.html">FAQ HUB<span>HƯỚNG DẪN SỬ DỤNG</span></a><div class="sidebar-title">MỤC LỤC</div><div class="nav-groups"><div class="nav-group overview-group"><a href="index.html">Tổng quan dự án</a></div><div class="nav-group"><strong>Chuẩn bị và cài đặt</strong><a href="12-cai-dat.html" aria-current="page">Chuẩn bị môi trường và cài đặt</a><a href="13-khoi-dong-sao-luu.html">Khởi động, dừng và sao lưu</a></div><div class="nav-group"><strong>Bắt đầu sử dụng</strong><a href="01-dang-nhap.html">Đăng nhập và đăng xuất</a><a href="02-chon-website.html">Chọn website và chuyển chức năng</a></div><div class="nav-group"><strong>Thiết lập hệ thống</strong><a href="10-cau-hinh-website.html">Cấu hình website và chatbot</a><a href="11-quan-ly-tai-khoan.html">Tạo tài khoản và cấp quyền</a></div><div class="nav-group"><strong>Quản lý nội dung</strong><a href="03-quan-ly-faq.html">Tạo, sửa và duyệt FAQ</a><a href="04-nhap-faq-excel.html">Nhập nhiều FAQ từ Excel</a><a href="05-anh-faq.html">Thêm và xóa ảnh FAQ</a><a href="06-tai-lieu-ai.html">Tải tài liệu cho AI sử dụng</a><a href="07-quan-ly-tai-lieu.html">Xem, duyệt và xóa tài liệu</a></div><div class="nav-group"><strong>Sử dụng chatbot</strong><a href="08-su-dung-chat.html">Hỏi và đọc câu trả lời</a><a href="09-nhung-chat.html">Đặt cửa sổ chat vào website</a></div><div class="nav-group"><strong>Tra cứu</strong><a href="14-xu-ly-su-co.html">Khi gặp sự cố</a><a href="15-tu-vung-giao-dien.html">Tên nút và trạng thái trên màn hình</a></div></div><div class="nav-foot"><a href="index.html">⌂ Về mục lục</a><p>Đọc theo thứ tự mục lục.<br>Dùng nút trước / tiếp để chuyển mục.</p></div></aside><main id="main"><button class="menu-toggle" aria-controls="manual-menu" aria-expanded="false">☰ Mở / đóng mục lục</button><header><div class="eyebrow">Cài đặt và vận hành · TÀI LIỆU TIẾNG VIỆT</div><h1>Chuẩn bị môi trường và cài đặt</h1><p class="lead">Cài đặt trên một máy Windows, theo 7 bước dưới đây.</p><div class="header-meta"><span>Hướng dẫn cài đặt lần đầu</span><button class="print">In trang / lưu PDF</button></div></header><article>
+<h2 id="chuan-bi">1. Cài phần mềm</h2>
+<p>Chuẩn bị trên máy Windows chạy hệ thống:</p>
+<div class="table-scroll"><table><thead><tr><th>Phần mềm</th><th>Phiên bản / sử dụng</th></tr></thead><tbody>
+<tr><td><a href="https://code.visualstudio.com/">VS Code</a></td><td>Mở dự án và chạy lệnh trong Terminal.</td></tr>
+<tr><td><a href="https://nodejs.org/en/download">Node.js</a></td><td>24.x, có kèm npm.</td></tr>
+<tr><td><a href="https://www.postgresql.org/download/windows/">PostgreSQL</a></td><td>17.x, 64-bit; từ 17.3 trở lên. Ghi lại cổng, tài khoản và mật khẩu khi cài.</td></tr>
+<tr><td>pgAdmin 4</td><td>Quản lý PostgreSQL và chạy schema.sql.</td></tr>
+<tr><td>pgvector</td><td>0.8.7; cài theo bước 3.</td></tr>
+<tr><td><a href="https://ollama.com/download/windows">Ollama</a></td><td>Chạy AI; tải mô hình ở bước 5.</td></tr>
+<tr><td>Edge hoặc Chrome</td><td>Mở trang quản trị và cửa sổ chat.</td></tr>
+</tbody></table></div>
+<p>TypeScript được cài cùng các gói dự án ở bước 2, không cần cài riêng.</p>
+
+<h2 id="goi-chuong-trinh">2. Cài các gói dự án</h2>
+<p>Mở thư mục dự án trong VS Code → <strong>Terminal → New Terminal</strong>. Chạy:</p>
+<pre><code>cd chatbot-backend
+npm ci
+cd ..\chatbot-frontend
+npm ci</code></pre>
+<p><strong>Kiểm tra:</strong> Cả hai lệnh npm ci hoàn tất, không báo lỗi.</p>
+
+<h2 id="database">3. Cài pgvector và tạo database</h2>
+<h3>Cần chuẩn bị</h3>
+<ul><li>PostgreSQL và pgAdmin 4. Đã cài thì dùng bản hiện có.</li><li>Bộ file pgvector đã biên dịch sẵn, tương thích với phiên bản PostgreSQL và Windows đang dùng.</li></ul>
+<h3>Các bước cài</h3>
+<ol><li>Trong pgAdmin, mở <strong>Query Tool</strong> → chạy <code>SHOW server_version;</code> để xem phiên bản PostgreSQL.</li>
+<li>Giải nén bộ pgvector phù hợp. Mở thư mục vừa giải nén, tìm các file ở cột bên trái rồi sao chép vào thư mục ở cột bên phải. Nếu đã cài pgvector thì bỏ qua bước này.</li></ol>
+<p>Ví dụ PostgreSQL 17 được cài tại <code>C:\Program Files\PostgreSQL\17</code>:</p>
+<div class="table-scroll"><table><thead><tr><th>File lấy từ bộ pgvector đã giải nén</th><th>Sao chép vào thư mục</th></tr></thead><tbody>
+<tr><td><code>vector.dll</code></td><td><code>C:\Program Files\PostgreSQL\17\lib</code></td></tr>
+<tr><td><code>vector.control</code></td><td><code>C:\Program Files\PostgreSQL\17\share\extension</code></td></tr>
+<tr><td>Tất cả file có tên bắt đầu bằng <code>vector--</code> và đuôi <code>.sql</code> trong bộ đó</td><td><code>C:\Program Files\PostgreSQL\17\share\extension</code></td></tr>
+</tbody></table></div>
+<p>Nếu PostgreSQL được cài ở nơi khác hoặc dùng phiên bản khác, thay đường dẫn trên bằng thư mục bản đang chạy. Không chép các file vào thư mục pgAdmin.</p>
+<ol start="3"><li>Trong pgAdmin: <strong>Databases → Create → Database</strong> → đặt tên <code>faq_hub</code>.</li>
+<li>Chọn <code>faq_hub</code> → <strong>Query Tool</strong> → mở <code>chatbot-backend/database/schema.sql</code> → chạy toàn bộ file.</li>
+<li>Làm mới <strong>Schemas → public → Tables</strong> → kiểm tra có <strong>12 bảng</strong>.</li></ol>
+<p>Chỉ chạy <code>schema.sql</code> cho database mới, trống. File tự bật pgvector và tạo tài khoản ban đầu.</p>
+
+<h2 id="cau-hinh">4. Cấu hình kết nối</h2>
+<p>Tạo <code>chatbot-backend/.env</code> từ <code>.env.example</code>; nếu đã có thì sửa các giá trị:</p>
+<pre><code>DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=&quot;mat_khau_PostgreSQL&quot;
+DB_NAME=faq_hub
+PORT=3000
+OLLAMA_URL=http://localhost:11434
+JWT_SECRET=&quot;thay_bang_chuoi_ngau_nhien&quot;</code></pre>
+<p>Điền mật khẩu PostgreSQL vào DB_PASSWORD. Tạo chuỗi JWT_SECRET bằng lệnh sau và chép kết quả vào file:</p>
+<pre><code>node -e &quot;console.log(require('crypto').randomBytes(48).toString('hex'))&quot;</code></pre>
+<p>Tạo hoặc sửa <code>chatbot-frontend/.env</code>:</p>
+<pre><code>VITE_API_URL=http://localhost:3000</code></pre>
+<p><a href="index.html#bien-moi-truong">Ý nghĩa các biến cấu hình</a>.</p>
+
+<h2 id="ollama">5. Tải mô hình AI</h2>
+<p>Mở Ollama. Chạy trong Terminal có kết nối Internet:</p>
+<pre><code>ollama pull nomic-embed-text
+ollama pull gemma3:4b
+ollama list</code></pre>
+<p><strong>Kiểm tra:</strong> Danh sách có cả hai mô hình. Chỉ cần tải lần đầu.</p>
+
+<h2 id="chay">6. Chạy hệ thống</h2>
+<p>Bật PostgreSQL và Ollama. Mở hai Terminal tại thư mục gốc dự án:</p>
+<p><strong>Terminal 1 — backend:</strong></p>
+<pre><code>cd chatbot-backend
+npm run dev</code></pre>
+<p><strong>Terminal 2 — giao diện:</strong></p>
+<pre><code>cd chatbot-frontend
+npm run dev -- --host 127.0.0.1 --port 5173 --strictPort</code></pre>
+<p>Giữ hai Terminal mở. Truy cập <a href="http://localhost:5173/admin/login">http://localhost:5173/admin/login</a>.</p>
+
+<h2 id="kiem-tra">7. Đăng nhập và kiểm tra</h2>
+<ol><li>Đăng nhập bằng tài khoản khởi tạo: <code>admin / 123456</code>.</li>
+<li>Chọn website mẫu, mở cửa sổ chat và hỏi thử một câu trong FAQ.</li>
+<li>Tải một tài liệu Word có văn bản, kiểm tra trạng thái đã duyệt rồi hỏi nội dung trong tài liệu.</li></ol>
+<p>Sau khi kiểm tra, <a href="11-quan-ly-tai-khoan.html">tạo tài khoản admin riêng</a>, đăng nhập tài khoản mới rồi xóa tài khoản khởi tạo.</p>
+<p>Lần dùng tiếp theo: <a href="13-khoi-dong-sao-luu.html">Khởi động, dừng và sao lưu</a>.</p>
+</article><div class="page-nav bottom"><a href="index.html">⌂ Mục lục</a><a href="13-khoi-dong-sao-luu.html">Khởi động, dừng và sao lưu →</a></div><footer>FAQ Hub Chatbot · Hướng dẫn sử dụng tiếng Việt</footer></main><a class="to-top" href="#top">↑ Đầu trang</a><script src="assets/manual.js"></script></body></html>

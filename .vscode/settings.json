@@ -1,0 +1,9 @@
+{
+    "markdown.styles": [
+        ".vscode/mermaid-preview.css"
+    ],
+    "markdown-mermaid.resizable": true,
+    "markdown-mermaid.maxHeight": "85vh",
+    "markdown-mermaid.mouseNavigation.enabled": "always",
+    "markdown-mermaid.controls.show": "always"
+}

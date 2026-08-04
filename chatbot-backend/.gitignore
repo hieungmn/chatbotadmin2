@@ -1,0 +1,24 @@
+node_modules
+.knowledge-tmp/
+artifacts/
+# Keep environment variables out of version control
+.env
+.env.*
+!.env.example
+
+/src/generated/prisma
+
+# Build output — sinh lại được bằng `npm run build`, không cần đẩy lên git
+dist
+public/static/chatbot-widget.js
+
+# File người dùng upload — ảnh FAQ, tài liệu tri thức... không nên đẩy lên git
+# (dung lượng lớn, dữ liệu thật của khách hàng, không phải mã nguồn)
+uploads/*
+!uploads/.gitkeep
+
+# Log, file tạm hệ điều hành
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

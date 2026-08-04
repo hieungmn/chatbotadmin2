@@ -1,0 +1,44 @@
+erDiagram
+    direction LR
+    sites {
+        string site_id PK
+        string site_name
+        text contact_url
+        text home_url
+        string theme_color
+        string ai_model
+        text custom_prompt_rules
+        text avatar_url
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    admin_users {
+        int id PK
+        string username UK
+        string password_hash
+        int password_version
+        string full_name
+        string role
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    user_site_permissions {
+        int id PK
+        int user_id FK
+        string site_id FK
+        int granted_by FK
+        timestamp created_at
+    }
+    user_action_logs {
+        bigint id PK
+        int user_id FK
+        string action_type
+        text details
+        timestamp created_at
+    }
+    sites ||--o{ user_site_permissions : "site_id → site_id"
+    admin_users ||--o{ user_action_logs : "id → user_id"
+    admin_users |o--o{ user_site_permissions : "id → granted_by"
+    admin_users ||--o{ user_site_permissions : "id → user_id"

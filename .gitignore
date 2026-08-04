@@ -1,0 +1,7 @@
+# Private configuration and backups.
+/.env
+/.env.*
+/backups/
+
+# Exported design documents are kept outside the application source.
+/outputs/

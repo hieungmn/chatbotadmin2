@@ -1,0 +1,149 @@
+{
+  "language": "ja",
+  "type": "user-manual",
+  "entry": "index.html",
+  "pages": [
+    {
+      "file": "index.html",
+      "title": "FAQ Hub Chatbot 取扱説明書",
+      "group": "目次",
+      "audience": "利用者・管理者・運用担当者"
+    },
+    {
+      "file": "12-setup.html",
+      "title": "環境の準備とセットアップ",
+      "group": "準備とセットアップ",
+      "audience": "運用担当者"
+    },
+    {
+      "file": "13-operations.html",
+      "title": "起動・停止・バックアップ",
+      "group": "準備とセットアップ",
+      "audience": "運用担当者"
+    },
+    {
+      "file": "01-login.html",
+      "title": "ログインとログアウト",
+      "group": "使い始める",
+      "audience": "コンテンツ担当者・管理者"
+    },
+    {
+      "file": "02-select-site.html",
+      "title": "サイトと機能の選択",
+      "group": "使い始める",
+      "audience": "コンテンツ担当者・管理者"
+    },
+    {
+      "file": "10-site-settings.html",
+      "title": "サイトとチャットボットの設定",
+      "group": "システム設定",
+      "audience": "管理者"
+    },
+    {
+      "file": "11-user-management.html",
+      "title": "アカウント作成と権限設定",
+      "group": "システム設定",
+      "audience": "管理者"
+    },
+    {
+      "file": "03-faq-management.html",
+      "title": "FAQの作成・編集・承認",
+      "group": "コンテンツ管理",
+      "audience": "サイトのスタッフ・管理者"
+    },
+    {
+      "file": "04-faq-import.html",
+      "title": "ExcelからFAQを一括取込",
+      "group": "コンテンツ管理",
+      "audience": "サイトのスタッフ・管理者"
+    },
+    {
+      "file": "05-faq-images.html",
+      "title": "FAQ画像の追加・削除",
+      "group": "コンテンツ管理",
+      "audience": "サイトのスタッフ・管理者"
+    },
+    {
+      "file": "06-knowledge-upload.html",
+      "title": "AI用資料のアップロード",
+      "group": "コンテンツ管理",
+      "audience": "サイトのスタッフ・管理者"
+    },
+    {
+      "file": "07-knowledge-management.html",
+      "title": "資料の確認・承認・削除",
+      "group": "コンテンツ管理",
+      "audience": "サイトのスタッフ・管理者"
+    },
+    {
+      "file": "08-chat-usage.html",
+      "title": "質問と回答の確認",
+      "group": "チャットボットの利用",
+      "audience": "訪問者・コンテンツの確認担当者"
+    },
+    {
+      "file": "09-widget-embedding.html",
+      "title": "Webサイトへのチャット設置",
+      "group": "チャットボットの利用",
+      "audience": "Webサイト担当者"
+    },
+    {
+      "file": "14-troubleshooting.html",
+      "title": "トラブル対応",
+      "group": "困ったとき・用語",
+      "audience": "すべての利用者。起動の確認は運用担当者が行います。"
+    },
+    {
+      "file": "15-glossary.html",
+      "title": "画面のボタンと状態の意味",
+      "group": "困ったとき・用語",
+      "audience": "すべての利用者"
+    }
+  ],
+  "screenshots": {
+    "source": "サンプルデータと模擬API応答を用いて、実際のFrontendから取得した画面。矢印と説明を付けた画像を使用。",
+    "files": [
+      "ch04/annotated-04-admin-1.svg",
+      "ch04/annotated-04-admin-2.svg",
+      "ch04/annotated-04-chat-1.svg",
+      "ch04/annotated-04-chat-2.svg",
+      "ch04/annotated-04-chat-3.svg",
+      "ch04/annotated-04-chat-4.svg",
+      "ch04/annotated-04-chat-5.svg",
+      "ch04/annotated-04-faq-1.svg",
+      "ch04/annotated-04-faq-2.svg",
+      "ch04/annotated-04-faq-3.svg",
+      "ch04/annotated-04-faq-4.svg",
+      "ch04/annotated-04-faq-5.svg",
+      "ch04/annotated-04-feedback-1.svg",
+      "ch04/annotated-04-feedback-2.svg",
+      "ch04/annotated-04-images-1.svg",
+      "ch04/annotated-04-import-1.svg",
+      "ch04/annotated-04-import-2.svg",
+      "ch04/annotated-04-import-3.svg",
+      "ch04/annotated-04-knowledge-1.svg",
+      "ch04/annotated-04-knowledge-2.svg",
+      "ch04/annotated-04-knowledge-3.svg",
+      "ch04/annotated-04-knowledge-4.svg",
+      "ch04/annotated-04-login-1.svg",
+      "ch04/annotated-04-login-2.svg",
+      "ch04/annotated-04-login-3.svg",
+      "screens/faq-editor.png",
+      "screens/faq-images.png",
+      "screens/faq-preview.png",
+      "screens/faq.png",
+      "screens/knowledge-detail.png",
+      "screens/knowledge-error.png",
+      "screens/knowledge-result.png",
+      "screens/knowledge-wait.png",
+      "screens/knowledge.png",
+      "screens/login.png",
+      "screens/sites.png",
+      "screens/users.png",
+      "screens/widget-faq.png",
+      "screens/widget.png"
+    ]
+  },
+  "title": "FAQ Hub Chatbot 取扱説明書",
+  "source": "../index.html"
+}

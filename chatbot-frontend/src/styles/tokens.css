@@ -1,0 +1,54 @@
+/**
+ * Shared tokens for the light admin workspace.
+ * Navy branding, readable neutral text and consistent surfaces.
+ */
+:root {
+  /* Nền & bề mặt */
+  --bg: #F6F8FB;
+  --surface: #FFFFFF;
+  --surface-alt: #F8FAFC;
+  --surface-sunken: #EEF0F3;
+
+  /* Viền */
+  --border: #E5EAF1;
+  --border-strong: #CBD5E1;
+
+  /* Thương hiệu (navy trầm — tin cậy, không phô trương) */
+  --navy-900: #14213D;
+  --navy-800: #1B2C4F;
+  --navy-700: #24395F;
+  --navy-600: #2F4A78;
+  --navy-500: #3E5D8F;
+
+  /* Chữ */
+  --text-primary: #17243B;
+  --text-secondary: #596A82;
+  --text-tertiary: #5F7085;
+  --text-inverse: #FFFFFF;
+
+  /* Trạng thái */
+  --success: #176E43;
+  --success-bg: #E5F5EC;
+  --warning: #915E00;
+  --warning-bg: #FCF1DA;
+  --danger: #B3261E;
+  --danger-bg: #FBEAE9;
+  --info: #2F5D8A;
+  --info-bg: #E9F0F8;
+  --neutral: #5B6472;
+  --neutral-bg: #EEF0F3;
+
+  /* Corners and selected states */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --accent: #315CE7;
+  --accent-soft: #EDF2FF;
+
+  /* Font */
+  --font-ui: "Inter", "Noto Sans JP", "Yu Gothic UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-jp: "Noto Sans JP", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Bóng — rất nhẹ, viền 1px là chính */
+  --shadow-sm: 0 2px 5px rgba(20, 33, 61, 0.025);
+  --shadow-md: 0 10px 32px rgba(20, 33, 61, 0.08);
+}

@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "kind": "UI scenarios with invented sample data and simulated API results",
+  "source": "Current frontend rendered in isolated browser. All backend requests intercepted; no real administrator authentication, backend data, Ollama calls or database access. Form submissions and upload results are simulated locally.",
+  "mockedBackendRequests": 49,
+  "files": [
+    "faq-created.png",
+    "faq-editor.png",
+    "faq-images.png",
+    "faq-import.png",
+    "faq-preview.png",
+    "faq.png",
+    "knowledge-detail.png",
+    "knowledge-result.png",
+    "knowledge-wait.png",
+    "knowledge.png",
+    "login-result.png",
+    "login.png",
+    "sites.png",
+    "users.png",
+    "widget-ai.png",
+    "widget-fallback.png",
+    "widget-faq.png",
+    "widget-helpful.png",
+    "widget-open.png",
+    "widget-unhelpful.png",
+    "widget-wait.png",
+    "widget.png"
+  ]
+}

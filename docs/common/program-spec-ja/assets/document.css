@@ -1,0 +1,92 @@
+
+:root{--ink:#24364b;--muted:#607086;--line:#dce4eb;--paper:#fff;--bg:#f4f7fa;--accent:#16776f}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.8 "Yu Gothic",Meiryo,system-ui,sans-serif}a{color:#146b67;text-underline-offset:4px}button{font:inherit;cursor:pointer}aside.sidebar{position:fixed;inset:0 auto 0 0;width:270px;background:#20384b;color:#edf4f9;overflow-y:auto;padding:28px 18px}.brand{font-size:25px;font-weight:800;color:white;text-decoration:none}.brand small{display:block;font-size:12px;letter-spacing:.12em;color:#a9c8d7;margin-top:4px}nav{margin-top:30px}nav a{display:block;color:#e6eef4;text-decoration:none;font-size:14px;padding:11px 12px;margin:3px 0;border-radius:7px;border-left:3px solid transparent}nav a.current{background:#34546a;border-left-color:#75d0bc;font-weight:700}nav a:hover{background:#2a495e}.nav-label{font-size:11px;letter-spacing:.15em;color:#a4c6d7;margin:22px 12px 8px}.main{margin-left:270px;padding:42px clamp(22px,4vw,64px);max-width:1770px}header{background:white;border:1px solid var(--line);border-radius:12px;padding:28px 34px;margin-bottom:26px}.eyebrow{font-size:12px;letter-spacing:.15em;font-weight:bold;color:var(--accent)}h1{font-size:clamp(23px,2.5vw,32px);line-height:1.5;margin:12px 0}header p{color:var(--muted);margin:5px 0;font-size:14px}.content{background:white;border:1px solid var(--line);border-radius:12px;padding:30px clamp(20px,3vw,40px)}h2{font-size:20px;line-height:1.6;margin:40px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line)}h2:first-child{margin-top:0}h3{font-size:17px}p{margin:15px 0}code{font:12px/1.7 Consolas,"Yu Gothic",monospace;background:#eef3f6;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}pre{overflow:auto;background:#f3f6f8;border:1px solid var(--line);padding:20px;border-radius:8px;white-space:pre-wrap}pre code{background:none;padding:0}.table-wrap{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.75;min-width:600px}th{background:#eaf0f5;text-align:left;font-weight:700}th,td{padding:10px 12px;border:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}tbody tr:nth-child(even){background:#f8fafc}table td:first-child{min-width:75px}.note{background:#edf6f4;border-left:4px solid #4da899;padding:18px 22px;margin:22px 0;border-radius:0 8px 8px 0}.flow{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:23px 0}.flow span{border:1px solid #9db9ba;background:#f6fbfa;padding:12px 17px;border-radius:6px;font-size:14px}.flow b{font-weight:400;color:var(--accent)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:20px 0}.card{display:block;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:22px;font-weight:bold;background:#fff}.card:hover{border-color:var(--accent);background:#f4faf8}.card span{display:block;font-size:13px;font-weight:400;margin-top:10px;color:var(--muted)}figure{margin:25px 0}.screen{display:grid;grid-template-columns:minmax(0,3fr) minmax(180px,1fr);gap:25px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:16px}.screen img{width:100%;height:auto;max-height:760px;object-fit:contain}.screen figcaption{font-size:14px}.screen figcaption p{margin:18px 0;border-bottom:1px solid #e6edef;padding-bottom:13px}.screen figcaption span{color:var(--accent);font-size:19px}.pager{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin:28px 0}.pager a,.button{display:inline-block;padding:10px 18px;border:1px solid #b9cbd2;border-radius:7px;text-decoration:none;background:white;font-size:14px}.pager .primary{background:#e7f2ef;border-color:#95bdb2}.anchors{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.anchors a{font-size:13px}.symbols{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}details{border-bottom:1px solid var(--line);padding:15px 0}summary{cursor:pointer}footer{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding:22px 0}.top{position:fixed;bottom:20px;right:22px;background:white;border:1px solid var(--line);border-radius:50%;width:40px;height:40px;text-align:center;text-decoration:none}.menu-button{display:none}.diagram{position:relative;background:#f9fbfd;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:0 -10px}.diagram-stage{height:clamp(420px,70vh,760px);overflow:hidden;touch-action:none;cursor:grab;position:relative}.diagram-stage:active{cursor:grabbing}.diagram-stage>svg{position:absolute;max-width:none!important;max-height:none!important;transform-origin:0 0;display:block;user-select:none}.diagram-tools{position:absolute;right:12px;top:12px;z-index:3;display:flex;gap:3px;background:white;border:1px solid #c7d3dd;border-radius:7px;padding:4px;box-shadow:0 2px 8px #24364b15}.diagram-tools button{border:0;background:transparent;color:#345068;border-radius:4px;min-width:32px;height:32px;font-size:19px;line-height:1}.diagram-tools button:hover,.diagram-tools button[aria-pressed="true"]{background:#e7f0f3}.diagram:fullscreen{width:100vw;height:100vh;border-radius:0;background:#f9fbfd}.diagram:fullscreen .diagram-stage{height:100vh}.skip{position:fixed;top:-100px}.skip:focus{top:5px;left:280px;z-index:100;background:white;padding:10px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #46a99b;outline-offset:3px}
+@media(max-width:1000px){aside.sidebar{width:230px}.main{margin-left:230px;padding:25px}.screen{grid-template-columns:1fr}.screen figcaption span{display:none}.screen figcaption{border-top:1px solid var(--line)}}@media(max-width:760px){aside.sidebar{transform:translateX(-100%);z-index:20;width:275px;transition:transform .2s}body.menu-open aside.sidebar{transform:translateX(0)}.main{margin-left:0;padding:70px 14px 20px}.menu-button{display:block;position:fixed;top:12px;left:14px;z-index:30;background:#20384b;color:white;border:0;border-radius:6px;padding:8px 14px}header,.content{padding:22px 18px}.diagram-stage{height:60vh}.screen{padding:8px}}@media print{aside.sidebar,.menu-button,.pager,.diagram-tools,.top,.print-button{display:none}.main{margin:0;padding:0;max-width:none}.content,header{border:0;padding:0}.table-wrap{overflow:visible}table{min-width:0!important;font-size:10px}tr,figure{break-inside:avoid}.diagram-stage{height:auto!important;min-height:400px}.diagram-stage>svg{position:relative;width:100%!important;height:auto!important;transform:none!important}.screen{display:block}.screen img{max-height:600px}.screen figcaption{font-size:11px}h2{break-after:avoid}}
+
+/* Excel-aligned screenshots: arrows and labels share one scalable coordinate system. */
+.excel-figure{width:min(100%,var(--figure-width));margin:24px auto;border:1px solid var(--line);border-radius:8px;background:white;padding:10px}.excel-figure img{display:block;width:100%;height:auto}.architecture img{display:block;width:100%;height:auto}.architecture{margin:24px 0}@media print{.excel-figure{max-width:100%;break-inside:avoid}}
+
+/* Excel-aligned screenshots: arrows and labels share one scalable coordinate system. */
+.excel-figure{width:min(100%,var(--figure-width));margin:24px auto;border:1px solid var(--line);border-radius:8px;background:white;padding:10px}.excel-figure img{display:block;width:100%;height:auto}.architecture img{display:block;width:100%;height:auto}.architecture{margin:24px 0}@media print{.excel-figure{max-width:100%;break-inside:avoid}}
+
+.chapter-flow{width:min(100%,var(--flow-width));margin:25px auto;border:1px solid var(--line);padding:16px;border-radius:8px;background:white}.chapter-flow img{display:block;width:100%;height:auto}@media print{.chapter-flow{break-inside:auto}}
+
+/* Compact chapter 07: preserve diagram geometry; move and zoom inside the frame. */
+.flow-viewer{max-width:940px;margin:24px auto}.flow-viewer .diagram-stage{height:540px}.flow-viewer:fullscreen{max-width:none}.flow-viewer:fullscreen .diagram-stage{height:100vh}@media(max-width:760px){.flow-viewer .diagram-stage{height:440px}}@media print{.flow-viewer .diagram-stage{height:auto!important;min-height:0}.flow-viewer .diagram-stage>svg{position:relative;transform:none!important;width:100%!important;height:auto!important}}
+
+/* Chapter 07: compact horizontal rows; all steps visible without a viewer. */
+.horizontal-flow{margin:24px 0;padding:10px 4px;border:1px solid var(--line);border-radius:8px;background:#fff}.horizontal-flow img{display:block;width:100%;height:auto}.main:has(.horizontal-flow){max-width:1900px}@media(min-width:1200px){body[data-page="07-structure.html"] .main{padding-left:34px;padding-right:34px}}@media print{.horizontal-flow{padding:0;border:0;break-inside:avoid}}
+
+/* Chapter 07: compact horizontal rows; all steps visible without a viewer. */
+.horizontal-flow{margin:24px 0;padding:10px 4px;border:1px solid var(--line);border-radius:8px;background:#fff}.horizontal-flow img{display:block;width:100%;height:auto}.main:has(.horizontal-flow){max-width:1900px}@media(min-width:1200px){body[data-page="07-structure.html"] .main{padding-left:34px;padding-right:34px}}@media print{.horizontal-flow{padding:0;border:0;break-inside:avoid}}
+
+/* Chapter 07: restore vertical layout; compact only this chapter's typography. */
+body[data-page="07-structure.html"] .content{font-size:14px;line-height:1.8;padding:24px 28px}
+body[data-page="07-structure.html"] header{padding:22px 28px;margin-bottom:20px}
+body[data-page="07-structure.html"] h1{font-size:29px;margin:8px 0}
+body[data-page="07-structure.html"] h2{font-size:19px;margin:26px 0 12px;padding-bottom:8px}
+body[data-page="07-structure.html"] p{margin:10px 0}
+body[data-page="07-structure.html"] table{font-size:12.5px;line-height:1.65}
+body[data-page="07-structure.html"] th,body[data-page="07-structure.html"] td{padding:9px 11px}
+body[data-page="07-structure.html"] .table-wrap{margin:14px 0}
+.vertical-flow{width:min(100%,var(--flow-width));margin:16px auto;padding:8px;border:1px solid var(--line);border-radius:8px;background:white}
+.vertical-flow img{display:block;width:100%;height:auto}
+@media print{.vertical-flow{padding:0;border:0;break-inside:auto}}
+
+/* Reference tables: short key, wide explanation; API column widths apply only to the API list. */
+table.reference-table{table-layout:fixed;min-width:0}
+table.reference-table th:first-child,table.reference-table td:first-child{width:25%}
+table.reference-table th:nth-child(2),table.reference-table td:nth-child(2){width:75%}
+body[data-page="08-api.html"] table.api-table{min-width:980px;table-layout:fixed}
+table.api-table th:nth-child(1){width:8%}
+table.api-table th:nth-child(2){width:23%}
+table.api-table th:nth-child(3){width:9%}
+table.api-table th:nth-child(4){width:27%}
+table.api-table th:nth-child(5){width:33%}
+nav a{font-size:13px;padding-top:10px;padding-bottom:10px}
+.screen figcaption{font-size:13px}
+@media(max-width:760px){table.reference-table th:first-child,table.reference-table td:first-child{width:32%}table.reference-table th:nth-child(2),table.reference-table td:nth-child(2){width:68%}}
+@media print{table.reference-table,body[data-page="08-api.html"] table.api-table{min-width:0!important}}
+
+
+/* Data dictionary: protect identifiers, types and short flags from letter-by-letter wrapping. */
+body[data-page="06-dictionary.html"] table.dictionary-table{table-layout:fixed;min-width:1000px;font-size:13px}
+body[data-page="06-dictionary.html"] table.dictionary-table th,body[data-page="06-dictionary.html"] table.dictionary-table td{padding:10px 12px}
+table.dictionary-table th:nth-child(1),table.dictionary-table td:nth-child(1),
+table.dictionary-table th:nth-child(3),table.dictionary-table td:nth-child(3),
+table.dictionary-table th:nth-child(4),table.dictionary-table td:nth-child(4),
+table.dictionary-table th:nth-child(5),table.dictionary-table td:nth-child(5){white-space:nowrap;overflow-wrap:normal;word-break:normal}
+table.dictionary-table td:nth-child(1) code,table.dictionary-table td:nth-child(3) code{white-space:nowrap;overflow-wrap:normal;word-break:normal}
+table.dictionary-table th:nth-child(4),table.dictionary-table td:nth-child(4),
+table.dictionary-table th:nth-child(5),table.dictionary-table td:nth-child(5){text-align:center}
+table.dictionary-table td:nth-child(2),table.dictionary-table td:nth-child(6){white-space:normal;overflow-wrap:break-word;word-break:normal}
+@media(min-width:1200px){body[data-page="06-dictionary.html"] .main{padding-left:34px;padding-right:34px}body[data-page="06-dictionary.html"] .content{padding:26px 24px}}
+@media print{body[data-page="06-dictionary.html"] table.dictionary-table{min-width:0;font-size:9px}body[data-page="06-dictionary.html"] table.dictionary-table th,body[data-page="06-dictionary.html"] table.dictionary-table td{padding:6px}table.dictionary-table code{font-size:8px}}
+
+/* Match the light gray/green palette of the Japanese user manual. */
+:root{--ink:#000;--muted:#000;--line:#dce3dd;--paper:#fff;--bg:#f5f6f3;--accent:#2c7565}
+aside.sidebar{width:248px;padding:22px 14px;background:#edf1ed;color:#000;border-right:1px solid #d9e1d9;scrollbar-width:thin;scrollbar-color:#becbc0 #edf1ed}
+.brand{font-size:21px;color:#000}
+.brand small{font-size:10px;color:#000;letter-spacing:.04em}
+.nav-label{color:#000;margin:20px 10px 8px;padding-bottom:8px;border-bottom:1px solid #d0dcd1}
+aside.sidebar nav{margin-top:10px}
+aside.sidebar nav a{color:#000;font-size:12.5px;line-height:1.55;padding:8px 9px;margin:1px 0;border-radius:5px}
+aside.sidebar nav a.current{background:#dce9dd;border-left-color:#4c8b6c;color:#000}
+aside.sidebar nav a:hover{background:#e2eae1;color:#000}
+.main{margin-left:248px}
+th{background:#edf2ed}
+tbody tr:nth-child(even){background:#f8faf7}
+code{background:#eef2ec}
+pre{background:#f1f4ee}
+pre code{background:none}
+.note{background:#edf5ec;border-left-color:#76a282}
+.flow span{background:#f5f8f2;border-color:#c8d6c8}
+.card:hover{background:#f0f5ee;border-color:#84a58e}
+.pager a,.button{border-color:#cddbd0}
+.pager .primary{background:#e4eee2;border-color:#a5bea9}
+.diagram,.diagram:fullscreen{background:#f7f9f4}
+.diagram-tools{border-color:#cddbd0;box-shadow:0 2px 8px #283e2812}
+.diagram-tools button:hover,.diagram-tools button[aria-pressed="true"]{background:#e2ebe0}
+body,body :is(h1,h2,h3,h4,h5,h6,p,li,dt,dd,strong,em,small,span,a,a:hover,a:visited,th,td,caption,figcaption,summary,code,pre,button,label,footer,.eyebrow):not(svg *){color:#000}
+@media(max-width:1000px) and (min-width:761px){aside.sidebar{width:232px}.main{margin-left:232px}}
+@media(max-width:760px){aside.sidebar{width:260px}.main{margin-left:0}.menu-button{background:#edf1ed;color:#000;border:1px solid #cddbd0}.skip:focus{left:14px}}
+@media print{.main{margin-left:0}}

@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-04",
+  "source": "Current FaqUpload.tsx rendered by Vite. Only login/site/batch data simulated. A real five-column Excel fixture was selected and parsed by the actual frontend code; preview result was not mocked.",
+  "fixture": "E=answer_text, missing F",
+  "expected": "0 eligible rows, 2 skipped rows, no import button",
+  "backendWriteRequests": 0
+}

@@ -1,0 +1,72 @@
+erDiagram
+    direction LR
+    sites {
+        string site_id PK
+        string site_name
+        text contact_url
+        text home_url
+        string theme_color
+        string ai_model
+        text custom_prompt_rules
+        text avatar_url
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    admin_users {
+        int id PK
+        string username UK
+        string password_hash
+        int password_version
+        string full_name
+        string role
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    faq_import_batches {
+        int id PK
+        string site_id FK
+        string file_name
+        int row_count
+        int skipped_count
+        int uploaded_by FK
+        string approval_status
+        int reviewed_by FK
+        timestamp reviewed_at
+        timestamp created_at
+    }
+    faq_master {
+        int id PK
+        string data_id
+        string site_id FK
+        int import_batch_id FK
+        string category
+        text keywords
+        text question
+        text answer_text
+        text redirect_url
+        boolean is_draft
+        string approval_status
+        int created_by FK
+        int reviewed_by FK
+        timestamp reviewed_at
+        vector768 embedding
+        timestamp created_at
+        timestamp updated_at
+    }
+    faq_images {
+        int id PK
+        int faq_id FK
+        text image_path
+        int display_order
+        timestamp created_at
+    }
+    sites ||--o{ faq_import_batches : "site_id → site_id"
+    sites ||--o{ faq_master : "site_id → site_id"
+    admin_users |o--o{ faq_import_batches : "id → reviewed_by"
+    admin_users |o--o{ faq_import_batches : "id → uploaded_by"
+    admin_users |o--o{ faq_master : "id → created_by"
+    admin_users |o--o{ faq_master : "id → reviewed_by"
+    faq_import_batches |o--o{ faq_master : "id → import_batch_id"
+    faq_master ||--o{ faq_images : "id → faq_id"

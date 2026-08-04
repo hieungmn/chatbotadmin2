@@ -1,0 +1,82 @@
+erDiagram
+    direction TB
+    admin_users {
+        int id PK
+    }
+    sites {
+        string site_id PK
+    }
+    user_site_permissions {
+        int id PK
+        int user_id FK
+        string site_id FK
+        int granted_by FK
+    }
+    user_action_logs {
+        bigint id PK
+        int user_id FK
+    }
+    faq_import_batches {
+        int id PK
+        string site_id FK
+        int uploaded_by FK
+        int reviewed_by FK
+    }
+    faq_master {
+        int id PK
+        string site_id FK
+        int import_batch_id FK
+        int created_by FK
+        int reviewed_by FK
+    }
+    faq_images {
+        int id PK
+        int faq_id FK
+    }
+    site_knowledge_files {
+        int id PK
+        string site_id FK
+        int reviewed_by FK
+        int uploaded_by FK
+    }
+    site_knowledge_chunks {
+        bigint id PK
+        int file_id FK
+        string site_id FK
+    }
+    chat_sessions {
+        string session_id PK
+        string site_id FK
+    }
+    chat_messages {
+        bigint id PK
+        string session_id FK
+    }
+    search_logs {
+        bigint id PK
+        string session_id FK
+        string site_id FK
+        int matched_faq_id FK
+    }
+    sites ||--o{ chat_sessions : "site_id → site_id"
+    sites ||--o{ faq_import_batches : "site_id → site_id"
+    sites ||--o{ faq_master : "site_id → site_id"
+    sites ||--o{ search_logs : "site_id → site_id"
+    sites ||--o{ site_knowledge_chunks : "site_id → site_id"
+    sites ||--o{ site_knowledge_files : "site_id → site_id"
+    sites ||--o{ user_site_permissions : "site_id → site_id"
+    admin_users |o--o{ faq_import_batches : "id → reviewed_by"
+    admin_users |o--o{ faq_import_batches : "id → uploaded_by"
+    admin_users |o--o{ faq_master : "id → created_by"
+    admin_users |o--o{ faq_master : "id → reviewed_by"
+    admin_users |o--o{ site_knowledge_files : "id → reviewed_by"
+    admin_users |o--o{ site_knowledge_files : "id → uploaded_by"
+    admin_users ||--o{ user_action_logs : "id → user_id"
+    admin_users |o--o{ user_site_permissions : "id → granted_by"
+    admin_users ||--o{ user_site_permissions : "id → user_id"
+    chat_sessions ||--o{ chat_messages : "session_id → session_id"
+    chat_sessions ||--o{ search_logs : "session_id → session_id"
+    faq_import_batches |o--o{ faq_master : "id → import_batch_id"
+    faq_master ||--o{ faq_images : "id → faq_id"
+    faq_master |o--o{ search_logs : "id → matched_faq_id"
+    site_knowledge_files ||--o{ site_knowledge_chunks : "id → file_id"

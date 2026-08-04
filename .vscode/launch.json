@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chatbot frontend (5173)",
+            "url": "http://localhost:5173/admin/login",
+            "webRoot": "${workspaceFolder}/chatbot-frontend"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Chatbot frontend (5174 khi 5173 dang ban)",
+            "url": "http://localhost:5174/admin/login",
+            "webRoot": "${workspaceFolder}/chatbot-frontend"
+        }
+    ]
+}

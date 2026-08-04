@@ -1,0 +1,128 @@
+{
+  "language": "vi",
+  "database": {
+    "tables": 12,
+    "columns": 107,
+    "foreign_keys": 22
+  },
+  "erd": {
+    "format": "Mermaid erDiagram",
+    "renderer": "Mermaid 11.12.0",
+    "source_directory": "assets/erd",
+    "offline": true
+  },
+  "pages": {
+    "01-muc-dich.html": {
+      "title": "Mục đích và cách đọc",
+      "parent": null
+    },
+    "02-tong-quan.html": {
+      "title": "Tổng quan hệ thống",
+      "parent": null
+    },
+    "03-man-hinh-va-quyen.html": {
+      "title": "Người dùng và quyền truy cập",
+      "parent": null
+    },
+    "04-anh-faq.html": {
+      "title": "Ảnh FAQ",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-chuc-nang.html": {
+      "title": "Màn hình và thao tác",
+      "parent": null
+    },
+    "04-dang-nhap.html": {
+      "title": "Đăng nhập",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-danh-gia.html": {
+      "title": "Nút hữu ích trên widget",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-hoi-dap.html": {
+      "title": "Widget và hỏi đáp",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-nhap-faq-excel.html": {
+      "title": "Nhập FAQ từ Excel",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-nhap-tai-lieu.html": {
+      "title": "Nhập tài liệu AI",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-quan-ly-faq.html": {
+      "title": "Quản lý FAQ",
+      "parent": "04-chuc-nang.html"
+    },
+    "04-quan-tri.html": {
+      "title": "Quản trị site và tài khoản",
+      "parent": "04-chuc-nang.html"
+    },
+    "05-thu-thap-thong-tin.html": {
+      "title": "Nhập và tìm thông tin",
+      "parent": null
+    },
+    "06-erd-faq.html": {
+      "title": "FAQ, lô nhập và ảnh",
+      "parent": "06-thiet-ke-du-lieu.html"
+    },
+    "06-erd-hoi-thoai.html": {
+      "title": "Hội thoại và tìm kiếm",
+      "parent": "06-thiet-ke-du-lieu.html"
+    },
+    "06-erd-tai-khoan.html": {
+      "title": "Tài khoản và quyền website",
+      "parent": "06-thiet-ke-du-lieu.html"
+    },
+    "06-erd-tai-lieu.html": {
+      "title": "Tài liệu và đoạn văn bản",
+      "parent": "06-thiet-ke-du-lieu.html"
+    },
+    "06-erd-tong-quan.html": {
+      "title": "ERD tổng quan",
+      "parent": "06-thiet-ke-du-lieu.html"
+    },
+    "06-thiet-ke-du-lieu.html": {
+      "title": "Thiết kế dữ liệu và ERD",
+      "parent": null
+    },
+    "06-tu-dien-du-lieu.html": {
+      "title": "Từ điển dữ liệu",
+      "parent": "06-thiet-ke-du-lieu.html"
+    },
+    "07-cau-truc-chuong-trinh.html": {
+      "title": "Cấu trúc và luồng xử lý",
+      "parent": null
+    },
+    "07-tra-cuu-ma-nguon.html": {
+      "title": "Tra cứu hàm và tên lỗi",
+      "parent": "07-cau-truc-chuong-trinh.html"
+    },
+    "08-api.html": {
+      "title": "Giao diện API",
+      "parent": null
+    },
+    "09-gioi-han-van-hanh.html": {
+      "title": "Giới hạn và vận hành",
+      "parent": null
+    },
+    "10-ngoai-le.html": {
+      "title": "Lỗi và cách xử lý",
+      "parent": null
+    },
+    "phu-luc-kiem-tra.html": {
+      "title": "Phụ lục — Tiêu chí kiểm tra chức năng",
+      "parent": null
+    },
+    "11-nguon-thuat-ngu.html": {
+      "title": "Source và thuật ngữ",
+      "parent": null
+    },
+    "index.html": {
+      "title": "Đặc tả chương trình — Mục lục",
+      "parent": null
+    }
+  }
+}

@@ -1,0 +1,66 @@
+erDiagram
+    direction LR
+    sites {
+        string site_id PK
+        string site_name
+        text contact_url
+        text home_url
+        string theme_color
+        string ai_model
+        text custom_prompt_rules
+        text avatar_url
+        boolean is_active
+        timestamp created_at
+        timestamp updated_at
+    }
+    faq_master {
+        int id PK
+        string data_id
+        string site_id FK
+        int import_batch_id FK
+        string category
+        text keywords
+        text question
+        text answer_text
+        text redirect_url
+        boolean is_draft
+        string approval_status
+        int created_by FK
+        int reviewed_by FK
+        timestamp reviewed_at
+        vector768 embedding
+        timestamp created_at
+        timestamp updated_at
+    }
+    chat_sessions {
+        string session_id PK
+        string site_id FK
+        string ip_address
+        text user_agent
+        timestamp created_at
+        timestamp last_active_at
+    }
+    chat_messages {
+        bigint id PK
+        string session_id FK
+        string role
+        text content
+        text[] images
+        string model_name
+        timestamp created_at
+    }
+    search_logs {
+        bigint id PK
+        string session_id FK
+        string site_id FK
+        text query_text
+        int matched_faq_id FK
+        string response_source
+        timestamp searched_at
+    }
+    sites ||--o{ chat_sessions : "site_id → site_id"
+    sites ||--o{ faq_master : "site_id → site_id"
+    sites ||--o{ search_logs : "site_id → site_id"
+    chat_sessions ||--o{ chat_messages : "session_id → session_id"
+    chat_sessions ||--o{ search_logs : "session_id → session_id"
+    faq_master |o--o{ search_logs : "id → matched_faq_id"

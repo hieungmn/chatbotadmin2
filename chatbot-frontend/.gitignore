@@ -1,0 +1,19 @@
+node_modules
+
+# Build output — sinh lại được bằng `npm run build`
+dist
+dist-admin
+dist-ssr
+
+# Biến môi trường
+.env
+.env.*
+!.env.example
+
+# Log, file tạm hệ điều hành, editor
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
